@@ -1,0 +1,81 @@
+body {
+    background: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+}
+
+.dino {
+    width: 60px;
+    height: 60px;
+    background-image: url(https://raw.githubusercontent.com/celso-henrique/dio-dino-game/master/dino.png);
+    position: absolute;
+    bottom: 0;
+}
+
+.cactus {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 0;
+    background-image: url(https://raw.githubusercontent.com/celso-henrique/dio-dino-game/master/cactus.png);
+}
+
+.game-over {
+    text-align: center;
+    color: #666666;
+    font-size: 36px;
+    font-family: arial;
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#score {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 36
+}
+
+#restart {
+    position: absolute;
+    text-align: center;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    font-family: arial;
+    width: 150px;
+    height: 50px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+@keyframes slideright {
+    from {
+        background-position: 70000%;
+    }
+    
+    to {
+        background-position: 0;
+    }
+}
+
+.background {
+    position: absolute;
+    bottom: 0;
+    background-image: url(https://raw.githubusercontent.com/celso-henrique/dio-dino-game/master/background.png);
+    background-repeat: repeat-x;
+    animation: slideright 600s infinite linear;
+    width: 100%;
+    height: 200px;
+}
